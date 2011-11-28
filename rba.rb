@@ -11,14 +11,17 @@ module TimeSeries
 
   class Rba
 
-    def initialize
+    attr_reader :url, :links
 
+    def initialize
     end
 
     def scrape!
       scraper = TimeSeries::RbaScraper.new
       scraper.run!
       @links = scraper.links
+      @url = scraper.url
+      nil
     end
 
   end
