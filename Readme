@@ -1,0 +1,13 @@
+
+Quick Start:
+
+scraper = TimeSeries::Rba.new
+scraper.scrape!
+
+scraper.links
+=> Gives you all the xls links
+=> Each link has these attributes:
+    - :href, :uid, :url, :name, :xls, :frequency, :keyphrases
+
+That's pretty much it!
+
